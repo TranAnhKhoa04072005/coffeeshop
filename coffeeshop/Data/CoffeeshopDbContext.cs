@@ -1,29 +1,18 @@
 ﻿using coffeeshop.Models;
 using Microsoft.EntityFrameworkCore;
+using coffeeshop.Models;
 
 namespace coffeeshop.Data
 {
     public class CoffeeshopDbContext : DbContext
     {
-        public CoffeeshopDbContext(DbContextOptions<CoffeeshopDbContext> options) :
-        base(options)
+        public CoffeeshopDbContext(DbContextOptions<CoffeeshopDbContext> options) : base(options)
         {
         }
         public DbSet<Product> Products { get; set; }
+        //seed data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-
-            // Cấu hình cho thuộc tính Price kiểu decimal
-            modelBuilder.Entity<Product>()
-                .Property(p => p.Price)
-                .HasColumnType("decimal(18, 2)"); // Ví dụ: 18 chữ số tổng cộng, 2 chữ số sau dấu thập phân
-
-            //seed data
-            modelBuilder.Entity<Product>().HasData(
-            // ... dữ liệu seed của bạn ...
-            );
-
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Product>().HasData(
             new Product

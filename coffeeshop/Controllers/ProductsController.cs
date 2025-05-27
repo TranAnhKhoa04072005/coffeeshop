@@ -1,17 +1,16 @@
-﻿using coffeeshop.Models.Interfaces;
+﻿using coffeeshop.Models.Interface;
 using Microsoft.AspNetCore.Mvc;
+using coffeeshop.Models.Interface;
 
 namespace coffeeshop.Controllers
 {
-    public class ProductsController : Controller
+    public class ProductController : Controller
     {
         private IProductRepository productRepository;
-
-        public ProductsController(IProductRepository productRepository)
+        public ProductController(IProductRepository productRepository)
         {
             this.productRepository = productRepository;
         }
-
         public IActionResult Shop()
         {
             return View(productRepository.GetAllProducts());
@@ -25,6 +24,5 @@ namespace coffeeshop.Controllers
             }
             return NotFound();
         }
-
     }
 }
