@@ -16,5 +16,14 @@ namespace TH01.Controllers
         { 
             return View(productRepository.GetAllProducts());
         }
+        public IActionResult Contact()
+        {
+            return View();
+        }
+        public IActionResult Shop()
+        {
+            return View();
+        }
+
     }
 }
