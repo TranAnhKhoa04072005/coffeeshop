@@ -1,15 +1,18 @@
 ﻿using coffeeshop.Models;
 using Microsoft.EntityFrameworkCore;
-using coffeeshop.Models;
 
 namespace coffeeshop.Data
 {
     public class CoffeeshopDbContext : DbContext
     {
         public CoffeeshopDbContext(DbContextOptions<CoffeeshopDbContext> options) : base(options)
+        
+
         {
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; } 
+
         //seed data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -71,5 +74,6 @@ namespace coffeeshop.Data
             }
             );
         }
+
     }
 }

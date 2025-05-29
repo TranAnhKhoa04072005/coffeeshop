@@ -2,8 +2,7 @@
 using coffeeshop.Data;
 using coffeeshop.Models.Interface;
 using coffeeshop.Models;
-using coffeeshop.Data;
-using coffeeshop.Models.Interface;
+
 
 namespace coffeeshop.Models.Services
 {

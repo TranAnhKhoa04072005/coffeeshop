@@ -1,6 +1,5 @@
 ﻿using coffeeshop.Models.Interface;
 using Microsoft.AspNetCore.Mvc;
-using coffeeshop.Models.Interface;
 
 namespace coffeeshop.Controllers
 {
