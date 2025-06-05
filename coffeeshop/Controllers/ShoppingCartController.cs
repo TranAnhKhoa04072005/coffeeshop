@@ -1,8 +1,8 @@
 ﻿using coffeeshop.Models.Interface;
 using Microsoft.AspNetCore.Mvc;
+using coffeeshop.Models.Interface;
 
-
-namespace TH01.Controllers
+namespace coffeeshop.Controllers
 {
     public class ShoppingCartController : Controller
     {

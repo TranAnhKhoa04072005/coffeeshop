@@ -1,6 +1,7 @@
 ﻿using coffeeshop.Models;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace coffeeshop.Data
 {
     public class CoffeeshopDbContext : DbContext
@@ -11,7 +12,9 @@ namespace coffeeshop.Data
         {
         }
         public DbSet<Product> Products { get; set; }
-        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; } 
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
 
         //seed data
         protected override void OnModelCreating(ModelBuilder modelBuilder)

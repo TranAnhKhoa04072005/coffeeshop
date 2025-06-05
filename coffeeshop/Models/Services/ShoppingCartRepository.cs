@@ -3,6 +3,7 @@ using coffeeshop.Models.Interface;
 using coffeeshop.Models;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace coffeeshop.Models.Services
 {
     public class ShoppingCartRepository : IShoppingCartRepository

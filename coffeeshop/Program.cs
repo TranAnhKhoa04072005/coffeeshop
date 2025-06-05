@@ -2,6 +2,7 @@
 
 using coffeeshop.Data;
 using coffeeshop.Models.Interface;
+using coffeeshop.Models.Interfaces;
 using coffeeshop.Models.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,8 +15,11 @@ builder.Services.AddDbContext<CoffeeshopDbContext>(option =>
 option.UseSqlServer(builder.Configuration.GetConnectionString("CoffeeShopDbContextConnection")));
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>(ShoppingCartRepository.GetCart);
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
+Console.WriteLine("DI for IOrderRepository registered ??");
+
 
 var app = builder.Build();
 app.UseSession();
@@ -40,3 +44,4 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+

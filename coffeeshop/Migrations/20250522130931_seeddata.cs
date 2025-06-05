@@ -7,7 +7,7 @@
 namespace coffeeshop.Migrations
 {
     /// <inheritdoc />
-    public partial class seeddata : Migration
+    public partial class Seeddata : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

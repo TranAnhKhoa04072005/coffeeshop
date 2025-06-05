@@ -59,10 +59,19 @@
                             <a asp-controller="Shoppingcart" asp-action="AddToShoppingCart" asp-route-pId="@item.Id" class="btn item-btn btn-primary display-4" target="self">
                                 <span class="abrib-cart-add abr-iconfont mbr-iconfont-btn"></span>Add to cart
                             </a>
+
+                            <form asp-controller="Orders" asp-action="Checkout" method="get">
+                                <button type="submit"
+                                        class="btn btn-primary w-100 text-center"
+                                        data-mdb-ripple-color="dark">
+                                    Proceed
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
             }
         </div>
+
     </div>
 </section>

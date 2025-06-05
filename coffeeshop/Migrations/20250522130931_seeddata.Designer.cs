@@ -12,7 +12,7 @@ namespace coffeeshop.Migrations
 {
     [DbContext(typeof(CoffeeshopDbContext))]
     [Migration("20250522130931_seeddata")]
-    partial class seeddata
+    partial class Seeddata
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
